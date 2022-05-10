@@ -21,6 +21,6 @@ RUN pecl install xdebug && docker-php-ext-enable xdebug
 COPY xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
 
 # Clean the image
-RUN apt -y autoremove \
-    apt clean \
-    rm -rm /var/lib/apt/lists/* /tmp/* /var/temp/*
+RUN apt -y autoremove && \
+    apt clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/temp/*
