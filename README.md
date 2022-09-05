@@ -1,6 +1,11 @@
-# php-nginx-docker
+# Templat PHP-Nginx-Docker
 
-## Structure
+
+## :scroll: Overview
+
+Template for new projects using php and nginx inside docker containers
+
+## :open_file_folder: Folder Structure
 
 ```
 .
@@ -18,3 +23,13 @@
 ├── public
     └── index.php
 ```
+
+## :memo: License
+
+The [MIT License]() (MIT)
+
+## :smiley_cat: Author
+
+- [@walternascimentobarroso](https://walternascimentobarroso.github.io/)
+
+Made with &nbsp;❤️&nbsp;
