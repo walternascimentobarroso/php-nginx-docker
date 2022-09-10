@@ -18,3 +18,5 @@ bash_php: up
 
 bash_nginx: up
 	docker-compose exec nginx_default bash
+
+restart: stop up
