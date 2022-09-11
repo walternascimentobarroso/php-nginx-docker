@@ -13,10 +13,10 @@ build:
 composer:
 	docker-compose exec php_default composer install
 
-bash_php: up
+bash_php:
 	docker-compose exec php_default bash
 
-bash_nginx: up
+bash_nginx:
 	docker-compose exec nginx_default bash
 
 restart: stop up
