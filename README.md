@@ -8,7 +8,7 @@ Template for new projects using php and nginx inside docker containers
 </details>
 
 <details open>
-<summary><h2> :tools: Tools </h2></summary>
+<summary><h2> :hammer_and_pick: Tools </h2></summary>
 
 * [EditorConfig](https://editorconfig.org/)
 * [Docker](https://www.docker.com/)
