@@ -2,12 +2,22 @@
 
 
 <details open>
-<summary>
-## :scroll: Overview
-</summary>
+<summary><h2> :scroll: Overview </h2></summary>
 
 Template for new projects using php and nginx inside docker containers
 </details>
+
+<details open>
+<summary><h2> :tools: Tools </h2></summary>
+
+* [EditorConfig](https://editorconfig.org/)
+* [Docker](https://www.docker.com/)
+* [PHP](https://www.php.net/)
+* [Composer](https://getcomposer.org/)
+* [Makefile](https://www.gnu.org/software/make/manual/make.html)
+
+</details>
+
 
 <details open>
 <summary><h2> :open_file_folder: Folder Structure </h2></summary>
@@ -31,14 +41,14 @@ Template for new projects using php and nginx inside docker containers
 </details>
 
 <details open>
-<summary> ## :memo: License </summary>
+<summary><h2> :memo: License </h2></summary>
 
 The [MIT License](LICENSE) (MIT)
 </details>
 
 
 <details open>
-<summary> ## :smiley_cat: Author </summary>
+<summary><h2> :smiley_cat: Author </h2></summary>
 
 - [@walternascimentobarroso](https://walternascimentobarroso.github.io/)
 </details>
