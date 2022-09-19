@@ -1,10 +1,10 @@
 # Templat PHP-Nginx-Docker
 
-
 <details open>
 <summary><h2> :scroll: Overview </h2></summary>
 
 Template for new projects using php and nginx inside docker containers
+
 </details>
 
 <details open>
@@ -17,7 +17,6 @@ Template for new projects using php and nginx inside docker containers
 * [Makefile](https://www.gnu.org/software/make/manual/make.html)
 
 </details>
-
 
 <details open>
 <summary><h2> :open_file_folder: Folder Structure </h2></summary>
@@ -38,19 +37,21 @@ Template for new projects using php and nginx inside docker containers
 ├── public
     └── index.php
 ```
+
 </details>
 
 <details open>
 <summary><h2> :memo: License </h2></summary>
 
 The [MIT License](LICENSE) (MIT)
-</details>
 
+</details>
 
 <details open>
 <summary><h2> :smiley_cat: Author </h2></summary>
 
 - [@walternascimentobarroso](https://walternascimentobarroso.github.io/)
+
 </details>
 
 ***
