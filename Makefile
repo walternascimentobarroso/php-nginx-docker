@@ -1,7 +1,7 @@
 # Project Config
 PROJECT_NAME=default
 
-# Color Confgi
+# Color Config
 NOCOLOR=\033[0m
 GREEN=\033[0;32m
 BGREEN=\033[1;32m
@@ -15,6 +15,7 @@ up:
 	@echo "${YELLOW}Start all container${NOCOLOR}"
 	@echo ""
 	docker-compose up -d
+
 	@if [ ! -d vendor ]; then\
 		echo "";\
 		echo "${YELLOW}Install composer dependencies${NOCOLOR}";\
