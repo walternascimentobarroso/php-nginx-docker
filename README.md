@@ -8,13 +8,36 @@ Template for new projects using php and nginx inside docker containers
 </details>
 
 <details open>
+<summary><h2> :desktop_computer: Start Project </h2></summary>
+
+first clone the project:
+
+```
+git clone https://github.com/www/www.git
+```
+
+Make the build
+
+```
+make build
+```
+
+_:bulb: NOTE: if the project is alread build so just execute the command_
+
+```
+make up
+```
+
+</details>
+
+<details open>
 <summary><h2> :hammer_and_pick: Tools </h2></summary>
 
-* [EditorConfig](https://editorconfig.org/)
-* [Docker](https://www.docker.com/)
-* [PHP](https://www.php.net/)
-* [Composer](https://getcomposer.org/)
-* [Makefile](https://www.gnu.org/software/make/manual/make.html)
+-   [EditorConfig](https://editorconfig.org/)
+-   [Docker](https://www.docker.com/)
+-   [PHP](https://www.php.net/)
+-   [Composer](https://getcomposer.org/)
+-   [Makefile](https://www.gnu.org/software/make/manual/make.html)
 
 </details>
 
@@ -50,10 +73,10 @@ The [MIT License](LICENSE) (MIT)
 <details open>
 <summary><h2> :smiley_cat: Author </h2></summary>
 
-- [@walternascimentobarroso](https://walternascimentobarroso.github.io/)
+-   [@walternascimentobarroso](https://walternascimentobarroso.github.io/)
 
 </details>
 
-***
+---
 
 Made with &nbsp;❤️&nbsp;
