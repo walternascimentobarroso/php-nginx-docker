@@ -10,7 +10,7 @@ Template for new projects using php and nginx inside docker containers
 <details open>
 <summary><h2> :desktop_computer: Start Project </h2></summary>
 
-first clone the project:
+First clone the project:
 
 ```
 git clone https://github.com/www/www.git
@@ -22,11 +22,7 @@ Make the build
 make build
 ```
 
-_:bulb: NOTE: if the project is alread build so just execute the command_
-
-```
-make up
-```
+_:bulb: NOTE: If the project is already compiled then just run the `make up` command_
 
 </details>
 
