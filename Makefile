@@ -1,5 +1,15 @@
-# Project Config
-PROJECT_NAME=default
+# File variables
+FILE1 = .env
+FILE2 = .env.example
+
+# Check if .env file exists
+ifeq (,$(wildcard $(FILE1)))
+$(shell cp $(FILE2) $(FILE1))
+endif
+
+# Load environment variables
+include .env
+export $(shell sed 's/=.*//' .env)
 
 # Color Config
 NOCOLOR=\033[0m
@@ -10,15 +20,6 @@ CYAN=\033[0;36m
 
 # Default action
 .DEFAULT_GOAL := help
-
-# File variables
-FILE1 = .env
-FILE2 = .env.example
-
-# Check if .env file exists
-ifeq (,$(wildcard $(FILE1)))
-$(shell cp $(FILE2) $(FILE1))
-endif
 
 up:
 	@echo ""
