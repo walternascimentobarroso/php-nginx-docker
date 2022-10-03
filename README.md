@@ -18,6 +18,8 @@ git clone https://github.com/www/www.git
 
 Make the build
 
+_:bulb: NOTE: Before next step, check the variables in `.env` file_
+
 ```
 make build
 ```
@@ -31,6 +33,7 @@ _:bulb: NOTE: If the project is already compiled then just run the `make up` com
 
 -   [EditorConfig](https://editorconfig.org/)
 -   [Docker](https://www.docker.com/)
+-   [NGINX](https://www.nginx.com/)
 -   [PHP](https://www.php.net/)
 -   [Composer](https://getcomposer.org/)
 -   [Makefile](https://www.gnu.org/software/make/manual/make.html)
@@ -42,19 +45,24 @@ _:bulb: NOTE: If the project is already compiled then just run the `make up` com
 
 ```
 .
+├── .editorconfig
+├── .env.example
+├── .gitignore
+├── .vscode
+│   └── launch.json
 ├── LICENSE
 ├── Makefile
 ├── README.md
 ├── composer.json
-├── composer.lock
 ├── docker
-│   ├── default.conf
-│   ├── docker-compose.yml
-│   └── php
-│       ├── Dockerfile
-│       └── xdebug.ini
-├── public
-    └── index.php
+│   ├── docker-compose.yml
+│   ├── nginx
+│   │   └── default.conf
+│   └── php
+│       ├── Dockerfile
+│       └── xdebug.ini
+└── public
+    └── index.php
 ```
 
 </details>
