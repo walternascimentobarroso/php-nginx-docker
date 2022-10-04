@@ -15,6 +15,12 @@ up:
 	@echo "${YELLOW}Start all container${NOCOLOR}"
 	@echo ""
 	docker-compose up -d
+	@if [ ! -d vendor ]; then\
+		echo "";\
+		echo "${YELLOW}Install composer dependencies${NOCOLOR}";\
+		echo "";\
+		$(MAKE) composer;\
+	fi
 
 stop:
 	@echo ""
