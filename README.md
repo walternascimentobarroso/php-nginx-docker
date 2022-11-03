@@ -13,7 +13,7 @@ Template for new projects using php and nginx inside docker containers
 First clone the project:
 
 ```
-git clone https://github.com/www/www.git
+git clone https://github.com/walternascimentobarroso/php-nginx-docker.git
 ```
 
 Make the build
@@ -31,6 +31,7 @@ _:bulb: NOTE: If the project is already compiled then just run the `make up` com
 <details open>
 <summary><h2> :hammer_and_pick: Tools </h2></summary>
 
+-   [VSCode](https://code.visualstudio.com/)
 -   [EditorConfig](https://editorconfig.org/)
 -   [Docker](https://www.docker.com/)
 -   [NGINX](https://www.nginx.com/)
