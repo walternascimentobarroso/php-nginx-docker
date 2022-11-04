@@ -3,7 +3,7 @@ name: default
 services:
   nginx_default:
     container_name: nginx_default
-    image: nginx:1.23.1-alpine
+    image: nginx:1.23.3-alpine
     ports:
       - 80:80
     volumes:
