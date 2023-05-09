@@ -19,3 +19,8 @@ COPY --from=composer /usr/bin/composer /usr/bin/composer
 # Install xdebug
 RUN pecl install xdebug && docker-php-ext-enable xdebug
 COPY xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+
+# Clean the image
+RUN apt -y autoremove \
+    apt clean \
+    rm -rm /var/lib/apt/lists/* /tmp/* /var/temp/*
