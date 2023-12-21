@@ -13,6 +13,21 @@ services:
       - ../logs/nginx:/var/log/nginx
     links:
       - php_default
+
+  db_default:
+    container_name: "symfony-assessment-mariadb"
+    image: mariadb:latest
+    environment:
+      - MARIADB_ROOT_USER=${ROOT_USER}
+      - MARIADB_ALLOW_EMPTY_ROOT_PASSWORD=yes
+      - MARIADB_USER=${DB_USER}
+      - MARIADB_PASSWORD=${DB_PASSWORD}
+      - MARIADB_DATABASE=${DB_NAME}
+    volumes:
+      - db_default:/var/lib/mysql:rw
+    ports:
+      - 3306:3306
+
   php_default:
     container_name: php_default
     build: ./php
@@ -20,3 +35,6 @@ services:
     volumes:
       - ../:/var/www
       - ../logs/php:/var/log
+
+volumes:
+  db_default:
