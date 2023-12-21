@@ -9,6 +9,12 @@
             "log": true,
             "pathMappings": {
                 "/var/www/": "${workspaceFolder}"
+            },
+            "xdebugSettings": {
+                "max_children": 128,
+                "max_data": -1,
+                "show_hidden": 1,
+                "max_depth": 3
             }
         }
     ]
