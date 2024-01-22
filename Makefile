@@ -53,16 +53,16 @@ build:
 	docker-compose up --build -d
 
 composer:
-	docker-compose exec php_$(PROJECT_NAME) composer install
+	docker-compose exec php composer install
 
 composer_require:
-	docker-compose exec php_$(PROJECT_NAME) composer require $(PACKAGE)
+	docker-compose exec php composer require $(PACKAGE)
 
 bash_php:
-	docker-compose exec php_$(PROJECT_NAME) bash
+	docker-compose exec php bash
 
 bash_nginx:
-	docker-compose exec nginx_$(PROJECT_NAME) bash
+	docker-compose exec nginx bash
 
 restart: stop up
 

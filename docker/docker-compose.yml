@@ -1,8 +1,8 @@
 version: "3.9"
 name: default
 services:
-  nginx_default:
-    container_name: nginx_default
+  nginx:
+    container_name: nginx_${PROJECT_NAME}
     build: ./nginx
     ports:
       - "80:80"
@@ -12,29 +12,33 @@ services:
       - ../:/var/www
       - ../logs/nginx:/var/log/nginx
     links:
-      - php_default
+      - php
+      - db
 
-  db_default:
-    container_name: "symfony-assessment-mariadb"
-    image: mariadb:latest
-    environment:
-      - MARIADB_ROOT_USER=${ROOT_USER}
-      - MARIADB_ALLOW_EMPTY_ROOT_PASSWORD=yes
-      - MARIADB_USER=${DB_USER}
-      - MARIADB_PASSWORD=${DB_PASSWORD}
-      - MARIADB_DATABASE=${DB_NAME}
-    volumes:
-      - db_default:/var/lib/mysql:rw
-    ports:
-      - 3306:3306
-
-  php_default:
-    container_name: php_default
+  php:
+    container_name: php_${PROJECT_NAME}
     build: ./php
     working_dir: /var/www
     volumes:
       - ../:/var/www
       - ../logs/php:/var/log
+    links:
+      - db
+
+  db:
+    container_name: mysql_${PROJECT_NAME}
+    image: mysql:latest
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_USER: ${DB_ROOT_USER}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db_default:/var/lib/mysql:rw
+    ports:
+      - 3306:3306
 
 volumes:
   db_default:
